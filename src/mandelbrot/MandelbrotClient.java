@@ -259,13 +259,13 @@ class MandelbrotClient extends UnicastRemoteObject implements MandelbrotService 
 
                                 System.out.println("cr: " + p.cr + ", ci: " + p.ci);
 
-                                if (!p.continueIterieren) {
+
                                     sb.setEnabled(false);
                                     resetButton.setEnabled(true);
                                     stoppButton.setEnabled(false);
                                     long endTime = System.currentTimeMillis();
                                     System.out.println("Zeit: " + (endTime - startTime) + " ms");
-                                }
+
                             } catch (NumberFormatException nfe) {
                                 JOptionPane.showMessageDialog(f, "Bitte geben Sie gültige Zahlen ein.");
                             } catch (RemoteException | InterruptedException ex) {
